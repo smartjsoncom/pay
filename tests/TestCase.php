@@ -1,6 +1,6 @@
 <?php
 
-namespace Yansongda\Pay\Tests;
+namespace SmartJson\Pay\Tests;
 
 use Mockery;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;

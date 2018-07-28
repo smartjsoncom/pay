@@ -1,14 +1,14 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Wechat;
+namespace SmartJson\Pay\Gateways\Wechat;
 
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Pay\Exceptions\InvalidArgumentException;
-use Yansongda\Pay\Exceptions\InvalidSignException;
-use Yansongda\Pay\Gateways\Wechat;
-use Yansongda\Pay\Log;
-use Yansongda\Supports\Collection;
-use Yansongda\Supports\Traits\HasHttpRequest;
+use SmartJson\Pay\Exceptions\GatewayException;
+use SmartJson\Pay\Exceptions\InvalidArgumentException;
+use SmartJson\Pay\Exceptions\InvalidSignException;
+use SmartJson\Pay\Gateways\Wechat;
+use SmartJson\Pay\Log;
+use SmartJson\Supports\Collection;
+use SmartJson\Supports\Traits\HasHttpRequest;
 
 class Support
 {
@@ -31,7 +31,7 @@ class Support
     /**
      * Get instance.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return Support
      */
@@ -47,7 +47,7 @@ class Support
     /**
      * Request wechat api.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string      $endpoint
      * @param array       $data
@@ -88,11 +88,11 @@ class Support
     /**
      * Filter payload.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array                      $payload
      * @param array|string               $order
-     * @param \Yansongda\Supports\Config $config
+     * @param \SmartJson\Supports\Config $config
      *
      * @return array
      */
@@ -118,7 +118,7 @@ class Support
     /**
      * Generate wechat sign.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array $data
      *
@@ -140,7 +140,7 @@ class Support
     /**
      * Generate sign content.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array $data
      *
@@ -160,7 +160,7 @@ class Support
     /**
      * Convert array to xml.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array $data
      *
@@ -185,7 +185,7 @@ class Support
     /**
      * Convert xml to array.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $xml
      *
@@ -205,7 +205,7 @@ class Support
     /**
      * Wechat gateway.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $mode
      *

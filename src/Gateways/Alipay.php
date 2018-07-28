@@ -1,26 +1,26 @@
 <?php
 
-namespace Yansongda\Pay\Gateways;
+namespace SmartJson\Pay\Gateways;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Yansongda\Pay\Contracts\GatewayApplicationInterface;
-use Yansongda\Pay\Contracts\GatewayInterface;
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Pay\Exceptions\InvalidSignException;
-use Yansongda\Pay\Gateways\Alipay\Support;
-use Yansongda\Pay\Log;
-use Yansongda\Supports\Collection;
-use Yansongda\Supports\Config;
-use Yansongda\Supports\Str;
+use SmartJson\Pay\Contracts\GatewayApplicationInterface;
+use SmartJson\Pay\Contracts\GatewayInterface;
+use SmartJson\Pay\Exceptions\GatewayException;
+use SmartJson\Pay\Exceptions\InvalidSignException;
+use SmartJson\Pay\Gateways\Alipay\Support;
+use SmartJson\Pay\Log;
+use SmartJson\Supports\Collection;
+use SmartJson\Supports\Config;
+use SmartJson\Supports\Str;
 
 /**
- * @method \Yansongda\Pay\Gateways\Alipay\AppGateway app(array $config) APP 支付
- * @method \Yansongda\Pay\Gateways\Alipay\PosGateway pos(array $config) 刷卡支付
- * @method \Yansongda\Pay\Gateways\Alipay\ScanGateway scan(array $config) 扫码支付
- * @method \Yansongda\Pay\Gateways\Alipay\TransferGateway transfer(array $config) 帐户转账
- * @method \Yansongda\Pay\Gateways\Alipay\WapGateway wap(array $config) 手机网站支付
- * @method \Yansongda\Pay\Gateways\Alipay\WebGateway web(array $config) 电脑支付
+ * @method \SmartJson\Pay\Gateways\Alipay\AppGateway app(array $config) APP 支付
+ * @method \SmartJson\Pay\Gateways\Alipay\PosGateway pos(array $config) 刷卡支付
+ * @method \SmartJson\Pay\Gateways\Alipay\ScanGateway scan(array $config) 扫码支付
+ * @method \SmartJson\Pay\Gateways\Alipay\TransferGateway transfer(array $config) 帐户转账
+ * @method \SmartJson\Pay\Gateways\Alipay\WapGateway wap(array $config) 手机网站支付
+ * @method \SmartJson\Pay\Gateways\Alipay\WebGateway web(array $config) 电脑支付
  */
 class Alipay implements GatewayApplicationInterface
 {
@@ -48,7 +48,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Bootstrap.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param Config $config
      */
@@ -74,7 +74,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Pay an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $gateway
      * @param array  $params
@@ -97,7 +97,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Verfiy sign.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return Collection
      */
@@ -123,7 +123,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Query an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string|array $order
      *
@@ -143,7 +143,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Refund an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array $order
      *
@@ -163,7 +163,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Cancel an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string|array $order
      *
@@ -183,7 +183,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Close an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string|array $order
      *
@@ -203,7 +203,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Reply success to alipay.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return Response
      */
@@ -215,7 +215,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Make pay gateway.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $gateway
      *
@@ -235,7 +235,7 @@ class Alipay implements GatewayApplicationInterface
     /**
      * Magic pay.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $method
      * @param array  $params

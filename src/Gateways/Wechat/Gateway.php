@@ -1,12 +1,12 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Wechat;
+namespace SmartJson\Pay\Gateways\Wechat;
 
-use Yansongda\Pay\Contracts\GatewayInterface;
-use Yansongda\Pay\Gateways\Wechat;
-use Yansongda\Pay\Log;
-use Yansongda\Supports\Collection;
-use Yansongda\Supports\Config;
+use SmartJson\Pay\Contracts\GatewayInterface;
+use SmartJson\Pay\Gateways\Wechat;
+use SmartJson\Pay\Log;
+use SmartJson\Supports\Collection;
+use SmartJson\Supports\Config;
 
 abstract class Gateway implements GatewayInterface
 {
@@ -27,7 +27,7 @@ abstract class Gateway implements GatewayInterface
     /**
      * Bootstrap.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param Config $config
      */
@@ -40,7 +40,7 @@ abstract class Gateway implements GatewayInterface
     /**
      * Pay an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $endpoint
      * @param array  $payload
@@ -52,7 +52,7 @@ abstract class Gateway implements GatewayInterface
     /**
      * Get trade type config.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return string
      */
@@ -61,7 +61,7 @@ abstract class Gateway implements GatewayInterface
     /**
      * Preorder an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $endpoint
      * @param array  $payload

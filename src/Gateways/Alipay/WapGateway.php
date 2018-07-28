@@ -1,13 +1,13 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Alipay;
+namespace SmartJson\Pay\Gateways\Alipay;
 
 class WapGateway extends WebGateway
 {
     /**
      * Get method config.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return string
      */
@@ -19,7 +19,7 @@ class WapGateway extends WebGateway
     /**
      * Get productCode config.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return string
      */

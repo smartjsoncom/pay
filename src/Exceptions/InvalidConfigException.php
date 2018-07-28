@@ -1,6 +1,6 @@
 <?php
 
-namespace Yansongda\Pay\Exceptions;
+namespace SmartJson\Pay\Exceptions;
 
 class InvalidConfigException extends Exception
 {
@@ -14,7 +14,7 @@ class InvalidConfigException extends Exception
     /**
      * Bootstrap.
      *
-     * @author yansongda <me@yansonga.cn>
+     * @author smartjson <me@yansonga.cn>
      *
      * @param string       $message
      * @param int|string   $code

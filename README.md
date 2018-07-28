@@ -2,15 +2,15 @@
 
 <p align="center">
 <a href="https://styleci.io/repos/100355112"><img src="https://styleci.io/repos/100355112/shield?branch=master" alt="StyleCI"></a>
-<a href="https://scrutinizer-ci.com/g/yansongda/pay/?branch=master"><img src="https://scrutinizer-ci.com/g/yansongda/pay/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
-<a href="https://scrutinizer-ci.com/g/yansongda/pay/build-status/master"><img src="https://scrutinizer-ci.com/g/yansongda/pay/badges/build.png?b=master" alt="Build Status"></a>
-<a href="https://packagist.org/packages/yansongda/pay"><img src="https://poser.pugx.org/yansongda/pay/v/stable" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/yansongda/pay"><img src="https://poser.pugx.org/yansongda/pay/downloads" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/yansongda/pay"><img src="https://poser.pugx.org/yansongda/pay/v/unstable" alt="Latest Unstable Version"></a>
-<a href="https://packagist.org/packages/yansongda/pay"><img src="https://poser.pugx.org/yansongda/pay/license" alt="License"></a>
+<a href="https://scrutinizer-ci.com/g/smartjson/pay/?branch=master"><img src="https://scrutinizer-ci.com/g/smartjson/pay/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+<a href="https://scrutinizer-ci.com/g/smartjson/pay/build-status/master"><img src="https://scrutinizer-ci.com/g/smartjson/pay/badges/build.png?b=master" alt="Build Status"></a>
+<a href="https://packagist.org/packages/smartjson/pay"><img src="https://poser.pugx.org/smartjson/pay/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/smartjson/pay"><img src="https://poser.pugx.org/smartjson/pay/downloads" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/smartjson/pay"><img src="https://poser.pugx.org/smartjson/pay/v/unstable" alt="Latest Unstable Version"></a>
+<a href="https://packagist.org/packages/smartjson/pay"><img src="https://poser.pugx.org/smartjson/pay/license" alt="License"></a>
 </p>
 
-该文档为 v2.x 版本，如果您想找 v1.x 版本文档，请点击[https://github.com/yansongda/pay/tree/v1.x](https://github.com/yansongda/pay/tree/v1.x)
+该文档为 v2.x 版本，如果您想找 v1.x 版本文档，请点击[https://github.com/smartjson/pay/tree/v1.x](https://github.com/smartjson/pay/tree/v1.x)
 
 **注意：v1.x 与 v2.x 版本不兼容**
 
@@ -21,7 +21,7 @@
 
 欢迎 Star，欢迎 PR！
 
-laravel 扩展包请 [传送至这里](https://github.com/yansongda/laravel-pay)
+laravel 扩展包请 [传送至这里](https://github.com/smartjson/laravel-pay)
 
 QQ交流群：690027516
 
@@ -39,7 +39,7 @@ QQ交流群：690027516
 - PHP 7.0+
 - composer
 
-> php5 请使用 v1.x 版本[https://github.com/yansongda/pay/tree/v1.x](https://github.com/yansongda/pay/tree/v1.x)
+> php5 请使用 v1.x 版本[https://github.com/smartjson/pay/tree/v1.x](https://github.com/smartjson/pay/tree/v1.x)
 
 
 ## 支持的支付方法
@@ -89,40 +89,40 @@ QQ交流群：690027516
 - find(array/string $order)  
 说明：查找订单接口  
 参数：`$order` 为 `string` 类型时，请传入系统订单号，对应支付宝或微信中的 `out_trade_no`； `array` 类型时，参数请参考支付宝或微信官方文档。  
-返回：查询成功，返回 `Yansongda\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
+返回：查询成功，返回 `SmartJson\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
 异常：`GatewayException` 或 `InvalidSignException`  
 
 - refund(array $order)  
 说明：退款接口  
 参数：`$order` 数组格式，退款参数。  
-返回：退款成功，返回 `Yansongda\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
+返回：退款成功，返回 `SmartJson\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
 异常：`GatewayException` 或 `InvalidSignException`
 
 - cancel(array/string $order)  
 说明：取消订单接口  
 参数：`$order` 为 `string` 类型时，请传入系统订单号，对应支付宝或微信中的 `out_trade_no`； `array` 类型时，参数请参考支付宝或微信官方文档。    
-返回：取消成功，返回 `Yansongda\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
+返回：取消成功，返回 `SmartJson\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
 异常：`GatewayException` 或 `InvalidSignException`
 
 - close(array/string $order)  
 说明：关闭订单接口  
 参数：`$order` 为 `string` 类型时，请传入系统订单号，对应支付宝或微信中的 `out_trade_no`； `array` 类型时，参数请参考支付宝或微信官方文档。  
-返回：关闭成功，返回 `Yansongda\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
+返回：关闭成功，返回 `SmartJson\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
 异常：`GatewayException` 或 `InvalidSignException`  
 
 - verify()  
 说明：验证服务器返回消息是否合法  
-返回：验证成功，返回 `Yansongda\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
+返回：验证成功，返回 `SmartJson\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据。  
 异常：`GatewayException` 或 `InvalidSignException`  
 
 - PAYMETHOD(array $order)  
 说明：进行支付；具体支付方法名称请参考「支持的支付方法」一栏  
-返回：成功，返回 `Yansongda\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据或 `Symfony\Component\HttpFoundation\Response` 实例，可通过 `return $response->send()`(laravel 框架中直接 `return $response`) 返回，具体请参考文档。  
+返回：成功，返回 `SmartJson\Supports\Collection` 实例，可以通过 `$colletion->xxx` 或 `$collection['xxx']` 访问服务器返回的数据或 `Symfony\Component\HttpFoundation\Response` 实例，可通过 `return $response->send()`(laravel 框架中直接 `return $response`) 返回，具体请参考文档。  
 异常：`GatewayException` 或 `InvalidSignException`  
 
 ## 安装
 ```shell
-composer require yansongda/pay -vvv
+composer require smartjson/pay -vvv
 ```
 
 ## 使用说明
@@ -133,15 +133,15 @@ composer require yansongda/pay -vvv
 
 namespace App\Http\Controllers;
 
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Log;
+use SmartJson\Pay\Pay;
+use SmartJson\Pay\Log;
 
 class PayController extends Controller
 {
     protected $config = [
         'app_id' => '2016082000295641',
-        'notify_url' => 'http://yansongda.cn/notify.php',
-        'return_url' => 'http://yansongda.cn/return.php',
+        'notify_url' => 'http://smartjson.cn/notify.php',
+        'return_url' => 'http://smartjson.cn/return.php',
         'ali_public_key' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuWJKrQ6SWvS6niI+4vEVZiYfjkCfLQfoFI2nCp9ZLDS42QtiL4Ccyx8scgc3nhVwmVRte8f57TFvGhvJD0upT4O5O/lRxmTjechXAorirVdAODpOu0mFfQV9y/T9o9hHnU+VmO5spoVb3umqpq6D/Pt8p25Yk852/w01VTIczrXC4QlrbOEe3sr1E9auoC7rgYjjCO6lZUIDjX/oBmNXZxhRDrYx4Yf5X7y8FRBFvygIE2FgxV4Yw+SL3QAa2m5MLcbusJpxOml9YVQfP8iSurx41PvvXUMo49JG3BDVernaCYXQCoUJv9fJwbnfZd7J5YByC+5KM4sblJTq7bXZWQIDAQAB',
         // 加密方式： **RSA2**  
         'private_key' => 'MIIEpAIBAAKCAQEAs6+F2leOgOrvj9jTeDhb5q46GewOjqLBlGSs/bVL4Z3fMr3p+Q1Tux/6uogeVi/eHd84xvQdfpZ87A1SfoWnEGH5z15yorccxSOwWUI+q8gz51IWqjgZxhWKe31BxNZ+prnQpyeMBtE25fXp5nQZ/pftgePyUUvUZRcAUisswntobDQKbwx28VCXw5XB2A+lvYEvxmMv/QexYjwKK4M54j435TuC3UctZbnuynSPpOmCu45ZhEYXd4YMsGMdZE5/077ZU1aU7wx/gk07PiHImEOCDkzqsFo0Buc/knGcdOiUDvm2hn2y1XvwjyFOThsqCsQYi4JmwZdRa8kvOf57nwIDAQABAoIBAQCw5QCqln4VTrTvcW+msB1ReX57nJgsNfDLbV2dG8mLYQemBa9833DqDK6iynTLNq69y88ylose33o2TVtEccGp8Dqluv6yUAED14G6LexS43KtrXPgugAtsXE253ZDGUNwUggnN1i0MW2RcMqHdQ9ORDWvJUCeZj/AEafgPN8AyiLrZeL07jJz/uaRfAuNqkImCVIarKUX3HBCjl9TpuoMjcMhz/MsOmQ0agtCatO1eoH1sqv5Odvxb1i59c8Hvq/mGEXyRuoiDo05SE6IyXYXr84/Nf2xvVNHNQA6kTckj8shSi+HGM4mO1Y4Pbb7XcnxNkT0Inn6oJMSiy56P+CpAoGBAO1O+5FE1ZuVGuLb48cY+0lHCD+nhSBd66B5FrxgPYCkFOQWR7pWyfNDBlmO3SSooQ8TQXA25blrkDxzOAEGX57EPiipXr/hy5e+WNoukpy09rsO1TMsvC+v0FXLvZ+TIAkqfnYBgaT56ku7yZ8aFGMwdCPL7WJYAwUIcZX8wZ3dAoGBAMHWplAqhe4bfkGOEEpfs6VvEQxCqYMYVyR65K0rI1LiDZn6Ij8fdVtwMjGKFSZZTspmsqnbbuCE/VTyDzF4NpAxdm3cBtZACv1Lpu2Om+aTzhK2PI6WTDVTKAJBYegXaahBCqVbSxieR62IWtmOMjggTtAKWZ1P5LQcRwdkaB2rAoGAWnAPT318Kp7YcDx8whOzMGnxqtCc24jvk2iSUZgb2Dqv+3zCOTF6JUsV0Guxu5bISoZ8GdfSFKf5gBAo97sGFeuUBMsHYPkcLehM1FmLZk1Q+ljcx3P1A/ds3kWXLolTXCrlpvNMBSN5NwOKAyhdPK/qkvnUrfX8sJ5XK2H4J8ECgYAGIZ0HIiE0Y+g9eJnpUFelXvsCEUW9YNK4065SD/BBGedmPHRC3OLgbo8X5A9BNEf6vP7fwpIiRfKhcjqqzOuk6fueA/yvYD04v+Da2MzzoS8+hkcqF3T3pta4I4tORRdRfCUzD80zTSZlRc/h286Y2eTETd+By1onnFFe2X01mwKBgQDaxo4PBcLL2OyVT5DoXiIdTCJ8KNZL9+kV1aiBuOWxnRgkDjPngslzNa1bK+klGgJNYDbQqohKNn1HeFX3mYNfCUpuSnD2Yag53Dd/1DLO+NxzwvTu4D6DCUnMMMBVaF42ig31Bs0jI3JQZVqeeFzSET8fkoFopJf3G6UXlrIEAQ==',
@@ -204,8 +204,8 @@ class PayController extends Controller
 
 namespace App\Http\Controllers;
 
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Log;
+use SmartJson\Pay\Pay;
+use SmartJson\Pay\Log;
 
 class PayController extends Controller
 {
@@ -261,7 +261,7 @@ class PayController extends Controller
 ```
 
 ## 文档
-[详细说明文档](https://yansongda.gitbooks.io/pay/)
+[详细说明文档](https://smartjson.gitbooks.io/pay/)
 
 ## 错误
 如果在调用相关支付网关 API 时有错误产生，会抛出 `GatewayException`,`InvalidSignException` 错误，可以通过 `$e->getMessage()` 查看，同时，也可通过 `$e->raw` 查看调用 API 后返回的原始数据，该值为数组格式。

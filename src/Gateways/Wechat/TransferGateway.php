@@ -1,18 +1,18 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Wechat;
+namespace SmartJson\Pay\Gateways\Wechat;
 
 use Symfony\Component\HttpFoundation\Request;
-use Yansongda\Pay\Gateways\Wechat;
-use Yansongda\Pay\Log;
-use Yansongda\Supports\Collection;
+use SmartJson\Pay\Gateways\Wechat;
+use SmartJson\Pay\Log;
+use SmartJson\Supports\Collection;
 
 class TransferGateway extends Gateway
 {
     /**
      * Pay an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $endpoint
      * @param array  $payload
@@ -24,7 +24,7 @@ class TransferGateway extends Gateway
         if ($this->mode === Wechat::MODE_SERVICE) {
             unset($payload['sub_mch_id'], $payload['sub_appid']);
         }
-        $type = isset($payload['type']) ? ($payload['type'].($payload['type'] == 'app' ?: '_').'id') : 'app_id';
+        $type = isset($payload['type']) && $payload['type'] == 'app' ? $payload['type'].'id' : 'app_id';
 
         $payload['mch_appid'] = $this->config->get($type, '');
         $payload['mchid'] = $payload['mch_id'];
@@ -49,7 +49,7 @@ class TransferGateway extends Gateway
     /**
      * Get trade type config.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return string
      */

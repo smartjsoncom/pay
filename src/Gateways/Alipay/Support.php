@@ -1,15 +1,15 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Alipay;
+namespace SmartJson\Pay\Gateways\Alipay;
 
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Pay\Exceptions\InvalidConfigException;
-use Yansongda\Pay\Exceptions\InvalidSignException;
-use Yansongda\Pay\Log;
-use Yansongda\Supports\Arr;
-use Yansongda\Supports\Collection;
-use Yansongda\Supports\Str;
-use Yansongda\Supports\Traits\HasHttpRequest;
+use SmartJson\Pay\Exceptions\GatewayException;
+use SmartJson\Pay\Exceptions\InvalidConfigException;
+use SmartJson\Pay\Exceptions\InvalidSignException;
+use SmartJson\Pay\Log;
+use SmartJson\Supports\Arr;
+use SmartJson\Supports\Collection;
+use SmartJson\Supports\Str;
+use SmartJson\Supports\Traits\HasHttpRequest;
 
 class Support
 {
@@ -32,7 +32,7 @@ class Support
     /**
      * Get instance.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return Support
      */
@@ -48,7 +48,7 @@ class Support
     /**
      * Get Alipay API result.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array  $data
      * @param string $publicKey
@@ -84,7 +84,7 @@ class Support
     /**
      * Generate sign.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array  $parmas
      * @param string $privateKey
@@ -113,7 +113,7 @@ class Support
     /**
      * Verfiy sign.
      *
-     * @author yansongda <me@yansonga.cn>
+     * @author smartjson <me@yansonga.cn>
      *
      * @param array       $data
      * @param string      $publicKey
@@ -147,7 +147,7 @@ class Support
     /**
      * Get signContent that is to be signed.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array $data
      * @param bool  $verify
@@ -176,7 +176,7 @@ class Support
     /**
      * Convert encoding.
      *
-     * @author yansongda <me@yansonga.cn>
+     * @author smartjson <me@yansonga.cn>
      *
      * @param string|array $data
      * @param string       $to
@@ -192,7 +192,7 @@ class Support
     /**
      * Alipay gateway.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $mode
      *

@@ -1,6 +1,6 @@
 <?php
 
-namespace Yansongda\Pay\Exceptions;
+namespace SmartJson\Pay\Exceptions;
 
 class Exception extends \Exception
 {

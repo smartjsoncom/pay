@@ -1,18 +1,18 @@
 <?php
 
-namespace Yansongda\Pay\Contracts;
+namespace SmartJson\Pay\Contracts;
 
 interface GatewayInterface
 {
     /**
      * Pay an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $endpoint
      * @param array  $payload
      *
-     * @return Yansongda\Supports\Collection|Symfony\Component\HttpFoundation\Response
+     * @return SmartJson\Supports\Collection|Symfony\Component\HttpFoundation\Response
      */
     public function pay($endpoint, array $payload);
 }

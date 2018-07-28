@@ -1,17 +1,17 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Wechat;
+namespace SmartJson\Pay\Gateways\Wechat;
 
-use Yansongda\Pay\Log;
-use Yansongda\Supports\Collection;
-use Yansongda\Supports\Str;
+use SmartJson\Pay\Log;
+use SmartJson\Supports\Collection;
+use SmartJson\Supports\Str;
 
 class MpGateway extends Gateway
 {
     /**
      * Pay an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $endpoint
      * @param array  $payload
@@ -39,7 +39,7 @@ class MpGateway extends Gateway
     /**
      * Get trade type config.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return string
      */

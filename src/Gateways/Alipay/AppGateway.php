@@ -1,11 +1,11 @@
 <?php
 
-namespace Yansongda\Pay\Gateways\Alipay;
+namespace SmartJson\Pay\Gateways\Alipay;
 
 use Symfony\Component\HttpFoundation\Response;
-use Yansongda\Pay\Contracts\GatewayInterface;
-use Yansongda\Pay\Log;
-use Yansongda\Supports\Config;
+use SmartJson\Pay\Contracts\GatewayInterface;
+use SmartJson\Pay\Log;
+use SmartJson\Supports\Config;
 
 class AppGateway implements GatewayInterface
 {
@@ -19,7 +19,7 @@ class AppGateway implements GatewayInterface
     /**
      * Bootstrap.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param Config $config
      */
@@ -31,7 +31,7 @@ class AppGateway implements GatewayInterface
     /**
      * Pay an order.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $endpoint
      * @param array  $payload
@@ -55,7 +55,7 @@ class AppGateway implements GatewayInterface
     /**
      * Get method config.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return string
      */
@@ -67,7 +67,7 @@ class AppGateway implements GatewayInterface
     /**
      * Get productCode method.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @return string
      */

@@ -1,10 +1,10 @@
 <?php
 
-namespace Yansongda\Pay\Tests;
+namespace SmartJson\Pay\Tests;
 
-use Yansongda\Pay\Contracts\GatewayApplicationInterface;
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Pay\Pay;
+use SmartJson\Pay\Contracts\GatewayApplicationInterface;
+use SmartJson\Pay\Exceptions\GatewayException;
+use SmartJson\Pay\Pay;
 
 class PayTest extends TestCase
 {

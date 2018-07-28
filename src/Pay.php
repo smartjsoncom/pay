@@ -1,18 +1,18 @@
 <?php
 
-namespace Yansongda\Pay;
+namespace SmartJson\Pay;
 
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
-use Yansongda\Pay\Contracts\GatewayApplicationInterface;
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Supports\Config;
-use Yansongda\Supports\Str;
+use SmartJson\Pay\Contracts\GatewayApplicationInterface;
+use SmartJson\Pay\Exceptions\GatewayException;
+use SmartJson\Supports\Config;
+use SmartJson\Supports\Str;
 
 /**
- * @method static \Yansongda\Pay\Gateways\Alipay alipay(array $config) 支付宝
- * @method static \Yansongda\Pay\Gateways\Wechat wechat(array $config) 微信
+ * @method static \SmartJson\Pay\Gateways\Alipay alipay(array $config) 支付宝
+ * @method static \SmartJson\Pay\Gateways\Wechat wechat(array $config) 微信
  */
 class Pay
 {
@@ -26,7 +26,7 @@ class Pay
     /**
      * Bootstrap.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param array $config
      */
@@ -38,7 +38,7 @@ class Pay
     /**
      * Create a instance.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $method
      *
@@ -60,7 +60,7 @@ class Pay
     /**
      * Make a gateway.
      *
-     * @author yansongda <me@yansonga.cn>
+     * @author smartjson <me@yansonga.cn>
      *
      * @param string $gateway
      *
@@ -80,7 +80,7 @@ class Pay
     /**
      * Registe log service.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      */
     protected function registeLog()
     {
@@ -90,7 +90,7 @@ class Pay
         );
         $handler->setFormatter(new LineFormatter("%datetime% > %level_name% > %message% %context% %extra%\n\n"));
 
-        $logger = new Logger('yansongda.pay');
+        $logger = new Logger('smartjson.pay');
         $logger->pushHandler($handler);
 
         Log::setLogger($logger);
@@ -99,7 +99,7 @@ class Pay
     /**
      * Magic static call.
      *
-     * @author yansongda <me@yansongda.cn>
+     * @author smartjson <me@smartjson.cn>
      *
      * @param string $method
      * @param array  $params
